@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "bookname",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170516093321",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "book",
+    "pagination": "no"
+}

@@ -1,0 +1,30 @@
+
+<div *ngIf="book">
+    <h2><span jhiTranslate="jhipsterApp.book.detail.title">Book</span> {{book.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="jhipsterApp.book.bookname">Bookname</span></dt>
+        <dd>
+            <span>{{book.bookname}}</span>
+        </dd>
+        <dt><span jhiTranslate="jhipsterApp.book.price">Price</span></dt>
+        <dd>
+            <span>{{book.price}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'book/'+ book.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+    <div>这是一个测试div啊</div>
+</div>
